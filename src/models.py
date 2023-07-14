@@ -23,6 +23,7 @@ class Planet(Base):
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
+    person_id = Column(Integer, ForeignKey('person.id'), nullable=False)
     name = Column(String(40))
     population = Column(Integer)
     gravity = Column(String(40))
